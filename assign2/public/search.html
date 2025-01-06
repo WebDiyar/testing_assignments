@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Search Flights</h1>
+        <input type="text" id="search" placeholder="Search..." onkeyup="searchFlights()">
+        <ul id="results">
+            <li>Flight A</li>
+            <li>Flight B</li>
+            <li>Flight C</li>
+            <li>Flight D</li>
+            <li>Flight E</li>
+            <li>Flight F</li>
+        </ul>
+    </div>
+    <script>
+        function searchFlights() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const results = document.querySelectorAll('#results li');
+            results.forEach(flight => {
+                flight.style.display = flight.textContent.toLowerCase().includes(query) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+
+</html>

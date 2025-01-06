@@ -1,0 +1,17 @@
+{
+  "name": "assign3",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "node tests/test.spec.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "selenium-webdriver": "^4.27.0"
+  }
+}

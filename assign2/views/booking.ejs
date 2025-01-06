@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Train</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Book Train Seats</h1>
+        <form method="POST" action="/bookingTrain">
+            <% seats.forEach(seat=> { %>
+                <div>
+                    <input type="checkbox" name="selectedSeats" value="<%= seat.seatNumber %>" <%=seat.isBooked
+                        ? 'disabled' : '' %> >
+                    <label>
+                        <%= seat.seatNumber %> (<%= seat.isBooked ? 'Booked' : 'Available' %>)
+                    </label>
+                </div>
+                <% }) %>
+                    <button type="submit">Book Selected Seats</button>
+        </form>
+    </div>
+</body>
+
+</html>
