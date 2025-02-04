@@ -1,0 +1,14 @@
+{
+    "testCases": [
+        {
+            "id": "TC_01",
+            "endpoint": "/users",
+            "method": "GET"
+        },
+        {
+            "id": "TC_02",
+            "endpoint": "/posts",
+            "method": "GET"
+        }
+    ]
+}
